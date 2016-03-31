@@ -9,36 +9,72 @@
   </head>
   <body>
 
-    <header class="site-header">
-      <nav class="top-nav">
-        <div class="container">
-          <div form="top-nav-form">
-            <h1 class="top-nav__title">Puppies</h1>
+      <div class="top-nav">
+        <div class="top-nav__container">
+            <h1 class="top-nav__title">Puppies!</h1>
+            <span class="fa fa-plus-circle"></span>
+          </div>
+        </div>
+
+        <div
+
             <input type="text" class="name">
             <input type="text" class="age">
             <input type="text" class="name">
             <input type="text" class="Profile URL">
             <input type="text" class="Profile">
 
-            <div class="puppy-card">
-              <div contenteditable=""class="puppy-card-container"
-                <div class="puppy-card-row">
-                <input type="text" class="name">
-                </div>
-                <div class="puppy-card-row">
-                <input type="text" class="age">
-                </div>
-                <div class="puppy-card-row">
-                <input type="text" class="name">
-                </div>
-                <div class="puppy-card-row">
-                <input type="text" class="Profile URL">
-                </div>
-                <div class="puppy-card-row">
-                <input type="text" class="Profile">
-                </div>
-                <div class="form-button-row">
-                <div class="left-form-button">
-                <button class="delete-button">
-                </div>
-                <div class="right-form-button">
+            <div class="top-nav-form">
+              <div class="top-nav-form__container">
+                <h1 class="top-nav-form__title">Add a new puppy</h1>
+                <ul class="top-nav-form__inputs">
+                  <li class="top-nav-form__inputs-item">
+                    <h6 class="inputs-item__label">Name</h6>
+                    <input type="text" class="inputs-item__input">
+                  </li>
+                  <li class="top-nav-form__inputs-item">
+                    <h6 class="inputs-item__label">Age</h6>
+                    <input type="text" class="inputs-item__input">
+                  </li>
+                  <li class="top-nav-form__inputs-item">
+                    <h6 class="inputs-item__label">Photo URL</h6>
+                    <input type="text" class="inputs-item__input">
+                  </li>
+                  <li class="top-nav-form__inputs-item">
+                    <h6 class="inputs-item__label">Profile</h6>
+                    <input type="text" class="inputs-item__input">
+                  </li>
+                </ul>
+                <button class="top-nav-form__save-button">Save</button>
+              </div>
+            </div>
+          </div>
+
+
+  <main class="main">
+    <div class="container">
+      <div class="row">
+        <div class="card">
+          <div class="card-image">
+            <img src="http://www.placecage.com/200/200" alt="" />
+          </div>
+          <div class="card-form">
+            <ul class="card-form__list">
+              <h4 class="card-form__label">Name</h4>
+              <li class="card-form__value">filler</li>
+              <h4 class="card-form__label">Age</h4>
+              <li class="card-form__value">filler</li>
+              <h4 class="card-form__label">Photo URL</h4>
+              <li class="card-form__value">filler</li>
+              <h4 class="card-form__label">Profile</h4>
+              <li class="card-form__value">filler</li>
+              <div class="card-form__action">
+                <input class="card-form__button" type="button" name="delete" value="Delete">
+                <input class="card-form__button" type="button" name="update" value="Update">
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
