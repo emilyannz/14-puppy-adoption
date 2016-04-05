@@ -9,72 +9,50 @@
   </head>
   <body>
 
-      <div class="top-nav">
-        <div class="top-nav__container">
-            <h1 class="top-nav__title">Puppies!</h1>
-            <span class="fa fa-plus-circle"></span>
-          </div>
-        </div>
-
-        <div
-
-            <input type="text" class="name">
-            <input type="text" class="age">
-            <input type="text" class="name">
-            <input type="text" class="Profile URL">
-            <input type="text" class="Profile">
-
-            <div class="top-nav-form">
-              <div class="top-nav-form__container">
-                <h1 class="top-nav-form__title">Add a new puppy</h1>
-                <ul class="top-nav-form__inputs">
-                  <li class="top-nav-form__inputs-item">
-                    <h6 class="inputs-item__label">Name</h6>
-                    <input type="text" class="inputs-item__input">
-                  </li>
-                  <li class="top-nav-form__inputs-item">
-                    <h6 class="inputs-item__label">Age</h6>
-                    <input type="text" class="inputs-item__input">
-                  </li>
-                  <li class="top-nav-form__inputs-item">
-                    <h6 class="inputs-item__label">Photo URL</h6>
-                    <input type="text" class="inputs-item__input">
-                  </li>
-                  <li class="top-nav-form__inputs-item">
-                    <h6 class="inputs-item__label">Profile</h6>
-                    <input type="text" class="inputs-item__input">
-                  </li>
-                </ul>
-                <button class="top-nav-form__save-button">Save</button>
-              </div>
-            </div>
-          </div>
-
-
-  <main class="main">
-    <div class="container">
-      <div class="row">
-        <div class="card">
-          <div class="card-image">
-            <img src="http://www.placecage.com/200/200" alt="" />
-          </div>
-          <div class="card-form">
-            <ul class="card-form__list">
-              <h4 class="card-form__label">Name</h4>
-              <li class="card-form__value">filler</li>
-              <h4 class="card-form__label">Age</h4>
-              <li class="card-form__value">filler</li>
-              <h4 class="card-form__label">Photo URL</h4>
-              <li class="card-form__value">filler</li>
-              <h4 class="card-form__label">Profile</h4>
-              <li class="card-form__value">filler</li>
-              <div class="card-form__action">
-                <input class="card-form__button" type="button" name="delete" value="Delete">
-                <input class="card-form__button" type="button" name="update" value="Update">
-              </div>
-            </ul>
-          </div>
-        </div>
+    <div class="nav">
+      <div class="nav__container">
+        <h1 class="nav__title">Puppies</h1>
+        <span class="fa fa-plus-circle"></span>
       </div>
-    </div>
-  </main>
+
+    <div class="puppy-profile" </div>
+      <div class="puppy-profile__container">
+
+  <div class="puppy-profile__form-info">
+    <label class="puppy-profile__label" for="POST-name">Name</label>
+    <input class="puppy-profile__input" id="POST-name" placeholder="Name">
+  </div>
+
+  <div class="puppy-profile__form-info">
+    <label class="puppy-profile__label" for="POST-name">Age</label>
+    <input class="puppy-profile__input" id="POST-name" placeholder="Name">
+  </div>
+
+  <div class="puppy-profile__form-info">
+    <label class="puppy-profile__label" for="POST-photoUrl">Photo URL</label>
+    <input class="puppy-profile__input" id="POST-photoUrl" placeholder="Photo URL">
+  </div>
+
+  <div class="puppy-profile__form-info">
+    <label class="puppy-profile__label" for="POST-photoUrl">About</label>
+    <input class="puppy-profile__input" id="POST-photoUrl" placeholder="About">
+    <button type="submit" class="puppy-profile__save-button" id="POST-submit">Save</button>
+  </div>
+</div>
+</div>
+
+
+<div class="main-content">
+<div class="container">
+<div class="row"></div>
+</div>
+</div>
+
+<script src="/vendor.js" charset="utf-8"></script>
+<script src="/app.js" charset="utf-8"></script>
+<script type="text/javascript">
+const kickoff = require('index');
+kickoff();
+</script>
+</body>
+</html>
