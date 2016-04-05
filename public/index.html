@@ -9,51 +9,45 @@
   </head>
   <body>
 
-    <div class="nav">
-      <div class="nav__container">
-        <h1 class="nav__title">Puppies</h1>
+    <div class="top-nav">
+      <div class="top-nav__container">
+        <h1 class="top-nav__title">Puppies</h1>
         <span class="fa fa-plus-circle"></span>
       </div>
+    </div>
 
-    <div class="puppy-profile" </div>
-      <div class="puppy-profile__container">
-        <h1 class="puppy-profile__heading">Add a new puppy</h1>
+    <div class="top-nav-form">
+      <div class="top-nav__container">
+        <h1 class="top-nav__heading">Add a new puppy</h1>
 
-  <div class="puppy-profile__form-info">
-    <label class="puppy-profile__label" for="POST-name">Name</label>
-    <input class="puppy-profile__input" id="POST-name" placeholder="Name">
-  </div>
+        <form class="top-nav-form__info">
+          <label class="top-nav-form__info__label" for="POST-name">Name</label>
+          <input class="top-nav-form__info__input" id="POST-name" placeholder="Name">
 
-  <div class="puppy-profile__form-info">
-    <label class="puppy-profile__label" for="POST-name">Age</label>
-    <input class="puppy-profile__input" id="POST-name" placeholder="Name">
-  </div>
+          <label class="top-nav-form__info__label" for="POST-name">Age</label>
+          <input class="top-nav-form__info__input" id="POST-name" placeholder="Name">
 
-  <div class="puppy-profile__form-info">
-    <label class="puppy-profile__label" for="POST-photoUrl">Photo URL</label>
-    <input class="puppy-profile__input" id="POST-photoUrl" placeholder="Photo URL">
-  </div>
+          <label class="top-nav-form__info__label" for="POST-photoUrl">Photo URL</label>
+          <input class="top-nav-form__info__input" id="POST-photoUrl" placeholder="Photo URL">
 
-  <div class="puppy-profile__form-info">
-    <label class="puppy-profile__label" for="POST-photoUrl">About</label>
-    <input class="puppy-profile__input" id="POST-photoUrl" placeholder="About">
-    <button type="submit" class="puppy-profile__save-button" id="POST-submit">Save</button>
-  </div>
-</div>
-</div>
+          <label class="top-nav-form__info__label" for="POST-photoUrl">About</label>
+          <input class="top-nav-form__info__input" id="POST-photoUrl" placeholder="About">
+          <button type="submit" class="top-nav-form__save-button" id="POST-submit">Save</button>
+        </form>
+      </div>
+    </div>
 
+    <div class="main-content">
+      <div class="container">
+        <div class="row"></div>
+      </div>
+    </div>
 
-<div class="main-content">
-<div class="container">
-<div class="row"></div>
-</div>
-</div>
-
-<script src="/vendor.js" charset="utf-8"></script>
-<script src="/app.js" charset="utf-8"></script>
-<script type="text/javascript">
-const kickoff = require('index');
-kickoff();
-</script>
-</body>
+    <script src="/vendor.js" charset="utf-8"></script>
+    <script src="/app.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      const kickoff = require('index');
+      kickoff();
+    </script>
+  </body>
 </html>
