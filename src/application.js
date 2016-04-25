@@ -20,15 +20,15 @@ export default class ApplicationView {
         about: this.formabout,
       };
 
-      // fetch(`http://tiny-tn.herokuapp.com/collections/ez-puppies`, { method : `POST` })
-      .then(r => r.json())
-      .then((data) => {
-        Object.assign(this.puppyinfo, data);
-      })
+      fetch(`http://tiny-tn.herokuapp.com/collections/ez-puppies`, { method : `POST` })
+        .then(r => r.json())
+        .then((data) => {
+          Object.assign(this.puppyinfo, data);
+        })
 
     })
     this.puppyinfo = [];
-    fetch(`http://tiny-tn.herokuapp.com/collections/jf-puppies`)
+    fetch(`http://tiny-tn.herokuapp.com/collections/ez-puppies`)
     .then((r) => r.json())
     .then((data) => {
       this.data = data;
