@@ -1,0 +1,58 @@
+
+nav {
+  width: 100%;
+  background: $brand-orange;
+}
+
+.top-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: $gutter;
+
+  &__title {
+    color: $brand-white-text;
+  }
+
+  &__icon {
+    margin: -$gutter;
+    padding: $gutter;
+    color: $brand-white-text;
+    cursor: pointer;
+  }
+}
+
+.nav-form {
+  position: relative;
+  width: 100%;
+  background: $brand-dark-gray;
+  color: $brand-white-text;
+
+  &__title {
+    width: 100%;
+    margin: $gutter * 2 $gutter;
+  }
+
+  &__label {
+    margin: 0 $gutter;
+    font-size: 0.9rem;
+  }
+
+  &__input {
+    width: 100%;
+    margin: 0 $gutter $gutter;
+    padding: 0 $gutter * 2;
+    border-bottom: $brand-dark-border;
+    background: transparent;
+    color: $brand-dark-text;
+    font-weight: bold;
+  }
+
+  &__button {
+    margin: $gutter;
+    padding: $gutter;
+    border: 0;
+    border-radius: $brand-border-radius;
+    background: $brand-orange;
+    color: $brand-white-text;

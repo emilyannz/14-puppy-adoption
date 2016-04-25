@@ -1,8 +1,17 @@
-
-$brand-orange: #f60;
-$brand-grey: #5e6d70;
-$brand-light-grey: lighten($brand-grey, 20%);
-$brand-white: #f0f0f0;
+// ---colors---
+$brand-orange: #FC763D;
+$brand-dark-grey: #838288;
+$brand-light-grey: #BBBBB9;
+$brand-white: #ffffff;
 $brand-black: #030000;
-$brand-light-grey: #f2f2f3;
+
+
+// ---borders---
 $brand-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+
+// ---text---
+$brand-white-text: #ffffff;
+$brand-dark-grey-text: #2A222B;
+
+// ---formating-layout---
+$gutter: 0.6rem;
