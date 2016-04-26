@@ -1,0 +1,97 @@
+.main {
+  position: absolute;
+  transition: top 0.2s ease;
+  top: 47px;
+  width: 100%;
+  min-height: 100vh;
+  background: $brand-white;
+}
+
+.slide {
+  transition: top 0.2s ease;
+  top: 400px;
+}
+
+.puppy-status {
+  width: 100%;
+  margin: $gutter 0;
+  padding: $gutter;
+  border-radius: $brand-border-radius;
+  color: $brand-dark-grey-text;
+  text-align: center;
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  margin: $gutter * 2 $gutter;
+  background: $brand-light-grey;
+  box-shadow: $brand-shadow;
+}
+
+.card-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 14.5rem;
+  margin: $gutter;
+
+  &__container {
+    position: relative;
+    width: 100%;
+    border-radius: $brand-border-radius;
+    overflow: hidden;
+
+    &:before {
+      display: block;
+      padding-top: 100%;
+      content: '';
+    }
+  }
+
+  &__pic {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+}
+
+.card-form {
+  flex-grow: 1;
+  margin: $gutter;
+  color: $brand-dark-grey-text;
+
+  &__input {
+    width: 100%;
+    margin-bottom: $gutter;
+    padding: 0 $gutter;
+    border-bottom: $brand-dark-border;
+    background: transparent;
+  }
+
+  &__action {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__button {
+    margin: $gutter;
+    padding: $gutter;
+    border-radius: $brand-border-radius;
+    background: $brand-orange;
+    color: $brand-white-text;
+
+    &:focus {
+      outline: 0;
+      box-shadow: none;
+    }
+
+    &:active {
+      outline: 0;
+      box-shadow: $brand-dark-glow;
+    }
+  }
+}
