@@ -17,7 +17,6 @@ export default class AppView {
       .then((results) => results.json())
       .then((json) => {
         this.data = json;
-
         this.renderList();
       });
     this.renderFormView();
@@ -29,7 +28,6 @@ export default class AppView {
 
   add(puppy) {
     this.data = [puppy, ...this.data];
-
     this.renderList(this);
   }
 
@@ -43,10 +41,8 @@ export default class AppView {
 
   renderList() {
     this.puppyList.innerHTML = ``;
-
     this.data.forEach((puppy) => {
       this.puppyItem = new PuppyView(puppy, this);
-
       this.puppyList.appendChild(this.puppyItem.el);
     });
   }
