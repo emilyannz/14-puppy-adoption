@@ -18,20 +18,20 @@ export default class FormView {
         profile: this.form.querySelector(`[name=profile]`).value,
       };
 
-      fetch(`http://tiny-tn.herokuapp.com/collections/ez-puppy`, {
-          method: `POST`,
-          headers: {
-            Accept: `application/json`,
-            'Content-Type': `application/json`,
-          },
-          body: JSON.stringify(getValues),
-        }).then((res) => res.json())
-        .then((data) => {
-          this.form.reset();
+      fetch(`http://tiny-tn.herokuapp.com/collections/nt-puppy`, {
+      method: `POST`,
+      headers: {
+        Accept: `application/json`,
+        'Content-Type': `application/json`,
+      },
+      body: JSON.stringify(getValues),
+    }).then((res) => res.json())
+    .then((data) => {
+      this.form.reset();
 
-          this.app.add(data);
-          document.querySelector(`.main`).classList.toggle(`slide`);
-        });
-    });
-  }
+      this.app.add(data);
+       document.querySelector(`.main`).classList.toggle(`slide`);
+     });
+   });
+ }
 }
