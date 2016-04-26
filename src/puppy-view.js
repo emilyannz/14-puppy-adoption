@@ -28,7 +28,7 @@ export default class PuppyView {
       profile: this.el.querySelector(`#card-form-profile`).value,
     };
 
-    fetch(`http://tiny-tn.herokuapp.com/collections/nt-puppy/${this.puppy._id}`, {
+    fetch(`http://tiny-tn.herokuapp.com/collections/ez-puppy/${this.puppy._id}`, {
       method: `PUT`,
       headers: {
         Accept: `application/json`,
@@ -51,7 +51,7 @@ export default class PuppyView {
 
   removePuppy() {
     if (window.confirm(`Are you sure you want to delete ${this.puppy.name}?`)) {
-      fetch(`http://tiny-tn.herokuapp.com/collections/nt-puppy/${this.puppy._id}`, {
+      fetch(`http://tiny-tn.herokuapp.com/collections/ez-puppy/${this.puppy._id}`, {
           method: `DELETE`,
         }).then((res) => res.json())
         .then(() => {

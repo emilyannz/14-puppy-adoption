@@ -56,3 +56,15 @@ nav {
     border-radius: $brand-border-radius;
     background: $brand-orange;
     color: $brand-white-text;
+
+    &:focus {
+     border: 0;
+     outline: 0;
+   }
+
+   &:active {
+     outline: 0;
+     box-shadow: $brand-light-glow;
+   }
+ }
+}

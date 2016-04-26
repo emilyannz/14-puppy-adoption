@@ -4,6 +4,7 @@ html {
 }
 
 * {
+  overflow: auto;
   box-sizing: inherit;
 
   &:before,

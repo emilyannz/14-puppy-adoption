@@ -29,3 +29,12 @@ input {
   max-width: 60rem;
   margin: auto;
 }
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.puppy-list {
+  width: 100%;
+}
