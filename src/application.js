@@ -4,48 +4,50 @@
 // // [ ] Declare a contstructor that:
 //         * [ ] Makes `fetch` request to `tiny-tn` and set view data when request is complete and calls `render`
 //         * [ ] Creates and attaches a new `CreateFormView` to the top navigation
-export default class ApplicationView {
-  constructor() {
-    this.savebutton = document.querySelector('#POST-submit');
-    this.savebutton.addEventListener(`click`, (e) => {
-      e.preventDefault();
-      this.formname = document.querySelector('#POST-name').value;
-      this.formage = document.querySelector('#POST-age').value;
-      this.formphotoUrl = document.querySelector('#POST-photoUrl').value;
-      this.formabout = document.querySelector('#POST-about').value;
-      this.puppyinfo = {
-        name: this.formname,
-        age: this.formage,
-        photoUrl: this.formphotoUrl,
-        about: this.formabout,
-      };
+'use strict';
+import PuppyView from 'puppy-view';
+import FormView from 'form-view';
 
-      fetch(`http://tiny-tn.herokuapp.com/collections/ez-puppies`, { method : `POST` })
-        .then(r => r.json())
-        .then((data) => {
-          Object.assign(this.puppyinfo, data);
-        })
+export default class AppView {
+  constructor(element) {
+    this.el = element;
+    this.puppyList = this.el.querySelector(`.puppy-list`);
 
-    })
-    this.puppyinfo = [];
-    fetch(`http://tiny-tn.herokuapp.com/collections/ez-puppies`)
-    .then((r) => r.json())
-    .then((data) => {
-      this.data = data;
-      this.renderapp();
-    });
+    fetch(`http://tiny-tn.herokuapp.com/collections/ez-puppy`)
+      .then((results) => results.json())
+      .then((json) => {
+        this.data = json;
+
+        this.renderList();
+      });
+    this.renderFormView();
   }
 
+  renderFormView() {
+    this.formView = new FormView(this.el, this);
+  }
 
-  // - [ ] Declare `render` method that:
-  //      * [ ] Clears the puppy list HTML
-  //      * [ ] Creates `PuppyView`s for every item in `data`
-  //      * [ ] Appends `PuppyView` element to the puppy list
-  renderapp() {
-    const puppylist = document.querySelector(`.row`);
-    puppylist.innerHTML = ``;
+  add(puppy) {
+    this.data = [puppy, ...this.data];
+
+    this.renderList(this);
+  }
+
+  remove(puppy) {
+    this.data = this.data.filter((item) => {
+      return item._id !== puppy._id;
+    });
+
+    this.renderList(this);
+  }
+
+  renderList() {
+    this.puppyList.innerHTML = ``;
+
     this.data.forEach((puppy) => {
-      new PuppyView(puppy._id, puppy.name, puppy.age, puppy.photoUrl, puppy.about);
+      this.puppyItem = new PuppyView(puppy, this);
+
+      this.puppyList.appendChild(this.puppyItem.el);
     });
   }
 }
