@@ -19,19 +19,19 @@ export default class FormView {
       };
 
       fetch(`http://tiny-tn.herokuapp.com/collections/ez-puppy`, {
-        method: `POST`,
-        headers: {
-          Accept: `application/json`,
-          'Content-Type': `application/json`,
-        },
-        body: JSON.stringify(getValues),
-      }).then((res) => res.json())
-      .then((data) => {
-        this.form.reset();
+          method: `POST`,
+          headers: {
+            Accept: `application/json`,
+            'Content-Type': `application/json`,
+          },
+          body: JSON.stringify(getValues),
+        }).then((res) => res.json())
+        .then((data) => {
+          this.form.reset();
 
-        this.app.add(data);
-        document.querySelector(`.main`).classList.toggle(`slide`);
-      });
+          this.app.add(data);
+          document.querySelector(`.main`).classList.toggle(`slide`);
+        });
     });
   }
 }
