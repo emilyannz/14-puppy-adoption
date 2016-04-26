@@ -34,30 +34,30 @@ export default class PuppyView {
         Accept: `application/json`,
         'Content-Type': `application/json`,
       },
-      body: JSON.stringify(getValues),
-    }).then((res) => res.json())
-    .then((data) => {
-      Object.assign(data, getValues);
 
-      this.status = document.createElement(`h4`);
-      this.status.classList.add(`puppy-status`);
-      this.status.innerHTML = `${this.puppy.name} is up to date!`;
-      this.el.querySelector(`.card-image`).appendChild(this.status);
+        body: JSON.stringify(getValues),
+      }).then((res) => res.json())
+      .then((data) => {
+        Object.assign(data, getValues);
 
+        this.status = document.createElement(`h4`);
+        this.status.classList.add(`puppy-status`);
+        this.status.innerHTML = `${this.puppy.name} is up to date!`;
+        this.el.querySelector(`.card-image`).appendChild(this.status);
 
-      this.render();
-    });
+        this.render();
+      });
   }
 
   removePuppy() {
     if (window.confirm(`Are you sure you want to delete ${this.puppy.name}?`)) {
       fetch(`http://tiny-tn.herokuapp.com/collections/nt-puppy/${this.puppy._id}`, {
-        method: `DELETE`,
-      }).then((res) => res.json())
-      .then(() => {
-        this.app.remove(this.puppy);
-        alert(`${this.puppy.name} has been removed!`);
-      });
+          method: `DELETE`,
+        }).then((res) => res.json())
+        .then(() => {
+          this.app.remove(this.puppy);
+          alert(`${this.puppy.name} has been removed!`);
+        });
     }
   }
 
@@ -69,6 +69,7 @@ export default class PuppyView {
         <img class="card-image__pic" src="">
       </div>
     </div>
+
     <div class="card-form">
       <div class="card-form__list">
         <h4 class="card-form__label">Name</h4>
