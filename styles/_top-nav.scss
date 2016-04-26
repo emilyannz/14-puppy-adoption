@@ -26,7 +26,7 @@ nav {
 .nav-form {
   position: relative;
   width: 100%;
-  background: $brand-dark-gray;
+  background: $brand-dark-grey;
   color: $brand-white-text;
 
   &__title {
@@ -45,7 +45,7 @@ nav {
     padding: 0 $gutter * 2;
     border-bottom: $brand-dark-border;
     background: transparent;
-    color: $brand-dark-text;
+    color: $brand-dark-grey-text;
     font-weight: bold;
   }
 
@@ -58,8 +58,8 @@ nav {
     color: $brand-white-text;
 
     &:focus {
-     border: 0;
      outline: 0;
+     border: 0;
    }
 
    &:active {

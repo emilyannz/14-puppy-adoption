@@ -29,11 +29,11 @@ export default class PuppyView {
     };
 
     fetch(`http://tiny-tn.herokuapp.com/collections/ez-puppy/${this.puppy._id}`, {
-      method: `PUT`,
-      headers: {
-        Accept: `application/json`,
-        'Content-Type': `application/json`,
-      },
+        method: `PUT`,
+        headers: {
+          Accept: `application/json`,
+          'Content-Type': `application/json`,
+        },
 
         body: JSON.stringify(getValues),
       }).then((res) => res.json())
